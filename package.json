@@ -16,9 +16,13 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
+    "react-globe": "^2.0.1",
+    "react-globe.gl": "^2.27.2",
     "react-particles": "^2.12.2",
+    "react-text-transition": "^3.1.0",
     "react-tsparticles": "^2.12.2",
     "react-typed": "^2.0.12",
+    "three": "^0.165.0",
     "tsparticles": "^3.4.0",
     "tsparticles-slim": "^2.12.0"
   },

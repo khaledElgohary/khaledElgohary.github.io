@@ -1,41 +1,55 @@
 body {
-  background-color: black;
+  background-color: rgb(1, 7, 19);
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 .App {
   text-align: center;
+  position: relative;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.Header-main {
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(1, 7, 19);
+  position: relative;
 }
 
 .Header {
-  position: relative;
   width: 100%;
-  height: 300px; /* Adjust the height as needed */
-  overflow: hidden;
-  background-color: black; /* Ensure the background is the same as the body */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.Header #Title {
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
+#Title {
+  color: #ffffff; 
+  text-shadow: 0 0 5px #231091, 0 0 10px #04ffea, 0 0 15px #ffffff;
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: 'Roboto Slab', serif;
+  background: transparent;
+  border-radius: 0;
   padding: 5px;
-  text-shadow: 0 0 10px #0000ff;
-  font-weight: bold;
+  position: relative;
+  bottom: 70%;
+  left: 44%;
 }
 
 .buttons-container {
-  position: fixed;
-  top: 2%;
-  right: 1%;
   display: flex;
   gap: 6px;
+  position: absolute;
+  top: -145px; /* Adjust the top position as needed */
+  right: 10px; /* Adjust the right position as needed */
 }
 
 #Projects-btn,
@@ -46,17 +60,87 @@ body {
   padding: 5px;
   border: 2px solid;
   border-radius: 25%;
-  justify-content: center;
-  align-items: center;
-}
-
-#About-btn,
-#Skills-btn,
-#Contact-btn,
-#Projects-btn {
   background-color: transparent;
   border-color: gray;
   color: white;
+  animation: fadeIn 1s;
 }
 
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
+.Introduction {
+  flex-direction: row;
+}
+
+.Introduction #Intro-text-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  left: 5%;
+  top: 20%;
+  gap: 10px;
+}
+
+.Explore h2 {
+  position: relative;
+  flex-direction: column;
+  color: #ffffff;
+  right: -100%;
+  font-size: large;
+  animation: fadeIn 2s;
+  top: 100px;
+}
+
+.Introduction #Intro-1 {
+  display: flex;
+}
+
+.Introduction #Intro-2 {
+  position: relative;
+  display: flex;
+  color: #ffffff;
+}
+
+.globe-container {
+  position: absolute;
+  right: 25%;
+  top: 10%;
+  width: 200px;
+  height: 200px;
+}
+
+.Introduction img {
+  position: relative;
+  display: flex;
+  width: 300px;
+  height: 200px;
+  padding: 10px 10px;
+  border-radius: 20%;
+  bottom: -150%;
+  right: 0%;
+  animation: fadeIn 2s;
+}
+
+.aboutme {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  bottom: -400px;
+  
+}
+
+.aboutme #aboutme-text {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#additional-content {
+  text-align: center;
+}

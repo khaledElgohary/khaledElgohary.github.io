@@ -3,6 +3,8 @@ import { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
+import Introduction from "./Components/Introduction";
+import AboutMe from "./Components/AboutMe";
 
 function App() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -29,7 +31,7 @@ function App() {
             interactivity: {
               events: {
                 onClick: {
-                  enable: true,
+                  enable: false,
                   mode: "push",
                 },
                 onHover: {
@@ -43,7 +45,7 @@ function App() {
                   quantity: 4,
                 },
                 repulse: {
-                  distance: 200,
+                  distance: 150,
                   duration: 0.4,
                 },
               },
@@ -56,8 +58,8 @@ function App() {
                 color: "#175581",
                 distance: 150,
                 enable: true,
-                opacity: 0.5,
-                width: 1,
+                opacity: 1,
+                width: 4,
               },
               move: {
                 direction: "none",
@@ -72,18 +74,18 @@ function App() {
               number: {
                 density: {
                   enable: true,
-                  area: 800,
+                  area: 8000,
                 },
-                value: 80,
+                value: 1000,
               },
               opacity: {
-                value: 0.5,
+                value: 0.75,
               },
               shape: {
                 type: "circle",
               },
               size: {
-                value: { min: 1, max: 5 },
+                value: { min: 2, max: 5 },
               },
             },
             detectRetina: true,
@@ -91,8 +93,12 @@ function App() {
         />
         <Header />
       </div>
-      <div className="Content">
-        {/* Your main content goes here */}
+      <div className="Introduction">
+          <Introduction />
+      </div>
+
+      <div className="Aboutme">
+        <AboutMe />
       </div>
     </div>
   );
