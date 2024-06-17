@@ -20,13 +20,13 @@ function App() {
     <div className="App">
       <div className="Header">
         <Particles
-          id="tsparticles"
+          id="header-particles"
           init={particlesInit}
           loaded={particlesLoaded}
           options={{
             fpsLimit: 120,
-            fullScreen:{
-              enable:false
+            fullScreen: {
+              enable: false,
             },
             interactivity: {
               events: {
@@ -74,9 +74,9 @@ function App() {
               number: {
                 density: {
                   enable: true,
-                  area: 8000,
+                  area: 800,
                 },
-                value: 1000,
+                value: 80,
               },
               opacity: {
                 value: 0.75,
@@ -93,12 +93,85 @@ function App() {
         />
         <Header />
       </div>
-      <div className="Introduction">
+      <div className="Content">
+        <Particles
+          id="content-particles"
+          init={particlesInit}
+          loaded={particlesLoaded}
+          options={{
+            fpsLimit: 120,
+            fullScreen: {
+              enable: true,
+            },
+            interactivity: {
+              events: {
+                onClick: {
+                  enable: false,
+                  mode: "push",
+                },
+                onHover: {
+                  enable: true,
+                  mode: "repulse",
+                },
+                resize: true,
+              },
+              modes: {
+                push: {
+                  quantity: 4,
+                },
+                repulse: {
+                  distance: 150,
+                  duration: 0.4,
+                },
+              },
+            },
+            particles: {
+              color: {
+                value: "#ffffff",
+              },
+              links: {
+                color: "#175581",
+                distance: 150,
+                enable: true,
+                opacity: 1,
+                width: 4,
+              },
+              move: {
+                direction: "none",
+                enable: true,
+                outModes: {
+                  default: "bounce",
+                },
+                random: false,
+                speed: 6,
+                straight: false,
+              },
+              number: {
+                density: {
+                  enable: true,
+                  area: 1500,
+                },
+                value: 80,
+              },
+              opacity: {
+                value: 0.75,
+              },
+              shape: {
+                type: "circle",
+              },
+              size: {
+                value: { min: 2, max: 5 },
+              },
+            },
+            detectRetina: true,
+          }}
+        />
+        <div className="Introduction">
           <Introduction />
-      </div>
-
-      <div className="Aboutme">
-        <AboutMe />
+        </div>
+        <div className="AboutMe">
+          <AboutMe />
+        </div>
       </div>
     </div>
   );
