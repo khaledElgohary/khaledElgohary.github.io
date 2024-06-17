@@ -1,15 +1,27 @@
-import React from 'react';
-
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';import { Icon, IconButton } from '@mui/material';
+import { Button } from 'react-bootstrap';
 function AboutMe() {
   return (
     <div className="aboutme">
       <div id="aboutme-text">
         <h2>About me</h2>
       </div>
-      <div id="additional-content">
-        <p>Here is some more content about me. You can scroll down to read more.</p>
-        <p>Additional content goes here.</p>
-        <p>You can add as much content as you want, and it will be scrollable.</p>
+      <div id="down-btn">
+        <Button style={{background:'transparent', border:'transparent'}}>
+          <KeyboardDoubleArrowDownIcon 
+          style={{backgroundColor:'transparent',color:'white'}} >
+          </KeyboardDoubleArrowDownIcon>
+        </Button>
+      </div>
+
+      <div className='aboutme-desc-conatiner'>
+        <div id='education'>
+          <h1>Educational Background</h1>
+        </div>
+
+        <div id='skills'>
+          <h1>Skills</h1>
+        </div>
       </div>
     </div>
   );

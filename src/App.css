@@ -41,7 +41,8 @@ body {
   padding: 5px;
   position: relative;
   bottom: 70%;
-  left: 44%;
+  left: 41.5%;
+  width: 25%;
 }
 
 .buttons-container {
@@ -50,6 +51,7 @@ body {
   position: absolute;
   top: -145px; /* Adjust the top position as needed */
   right: 10px; /* Adjust the right position as needed */
+  justify-content: center;
 }
 
 #Projects-btn,
@@ -71,17 +73,15 @@ body {
   100% { opacity: 1; }
 }
 
-.Introduction {
-  flex-direction: row;
-}
+
 
 .Introduction #Intro-text-container {
   position: absolute;
   display: flex;
   flex-direction: column;
   color: #ffffff;
-  left: 5%;
-  top: 20%;
+  left: 3%;
+  top: 35%;
   gap: 10px;
 }
 
@@ -89,7 +89,7 @@ body {
   position: relative;
   flex-direction: column;
   color: #ffffff;
-  right: -100%;
+  right: -150%;
   font-size: large;
   animation: fadeIn 2s;
   top: 100px;
@@ -97,17 +97,20 @@ body {
 
 .Introduction #Intro-1 {
   display: flex;
+  font-size: 3.5rem;
 }
 
 .Introduction #Intro-2 {
   position: relative;
   display: flex;
   color: #ffffff;
+  font-size: 3.0rem;
+  width: 650px;
 }
 
 .globe-container {
   position: absolute;
-  right: 25%;
+  right: 33%;
   top: 10%;
   width: 200px;
   height: 200px;
@@ -116,12 +119,12 @@ body {
 .Introduction img {
   position: relative;
   display: flex;
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 600px;
   padding: 10px 10px;
-  border-radius: 20%;
-  bottom: -150%;
-  right: 0%;
+  border-radius: 10%;
+  bottom: 360px;
+  left: 105%;
   animation: fadeIn 2s;
 }
 
@@ -132,7 +135,6 @@ body {
   align-items: center;
   color: white;
   bottom: -400px;
-  
 }
 
 .aboutme #aboutme-text {
@@ -143,4 +145,25 @@ body {
 
 #additional-content {
   text-align: center;
+}
+
+.aboutme #down-btn:hover{
+  scale: 1.5;
+}
+
+.aboutme .aboutme-desc-conatiner{
+  display: flex;
+  flex-direction: row;
+}
+
+.aboutme .aboutme-desc-conatiner #education{
+  position: relative;
+  right: 100%;
+  bottom: -60px;
+}
+
+.aboutme .aboutme-desc-conatiner #skills{
+  position: relative;
+  right: -50%;
+  bottom: -60px;
 }

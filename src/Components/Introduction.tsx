@@ -52,7 +52,7 @@ function Introduction (){
     return (
         <div className="Introduction">
             <div id="Intro-text-container">
-                <h2 id="Intro-1">
+                <h2 id="Intro-1" >
                     <ReactTyped
                         strings={["Hi my name is Khaled,"]}
                         typeSpeed={80}
@@ -78,7 +78,7 @@ function Introduction (){
                 </Fade>      
 
                 <div >
-                    <img src={photo}/>
+                    <img src={photo} />
                 </div>
             </div>
 
@@ -90,8 +90,8 @@ function Introduction (){
                     ref={globeEl} // Ensure the ref type is correct
                     globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
                     backgroundColor="rgba(0, 0, 0, 0)" // Set globe background color to transparent
-                    width={600}
-                    height={600}
+                    width={800}
+                    height={800}
                     pointsData={pointsData}
                     pointAltitude={0.01}
                     pointColor={d => (d as PointData).color}
